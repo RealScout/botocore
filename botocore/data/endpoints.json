@@ -634,6 +634,18 @@
             "eu-central-1": {}
           }
         },
+        "mturk": {
+          "partitionEndpoint": "aws-global",
+          "isRegionalized": false,
+          "endpoints": {
+            "aws-global": {
+              "hostname": "mechanicalturk.amazonaws.com",
+              "signatureVersions": [
+                "mturk"
+              ]
+            }
+          }
+        },
         "opsworks": {
           "endpoints": {
             "us-east-1": {}

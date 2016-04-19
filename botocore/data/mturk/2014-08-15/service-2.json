@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "apiVersion": "2014-08-15",
+    "endpointPrefix": "mechanicalturk",
+    "globalEndpoint":"mechanicalturk.amazonaws.com",
+    "serviceFullName": "AWS Mechanical Turk",
+    "signatureVersion": "mturk",
+    "xmlNamespace":"http://requester.mturk.amazonaws.com/doc/2014-08-15",
+    "protocol": "rest-xml"
+  },
+  "documentation": "",
+  "operations": {
+    "GetAccountBalance": {
+      "name": "GetAccountBalance",
+      "http": {
+        "method": "GET",
+        "requestUri":"/"
+      },
+      "input": {
+        "shape": "TestShape"
+      },
+      "output": {
+        "shape": "BalanceResult",
+        "documentation": ""
+      }
+    }
+  },
+  "shapes": {
+    "TestShape": {
+      "type": "structure",
+      "required": [
+      ],
+      "members": {}
+    },
+    "BalanceResult": {
+      "type": "structure",
+      "required": [
+        "AvailableBalance",
+        "OnHoldBalance"
+      ],
+      "members":{
+        "AvailableBalance":{
+          "shape":"Balance",
+          "documentation":""
+        },
+        "OnHoldBalance":{
+          "shape":"Balance",
+          "documentation":""
+        }
+      }
+    },
+    "Balance": {
+      "type":"string",
+      "min": 0
+    }
+  }
+}
